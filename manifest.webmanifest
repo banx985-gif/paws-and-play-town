@@ -1,0 +1,16 @@
+{
+  "name": "Paws and Play Town",
+  "short_name": "Paws & Play",
+  "description": "A toy town of friendly animals to touch, treat and play with.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#f3e3c8",
+  "theme_color": "#f3e3c8",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
