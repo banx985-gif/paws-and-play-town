@@ -19,7 +19,7 @@ canvas#game { display: block; position: fixed; left: 0; top: 0; touch-action: no
 .settings .grown-area, .settings .confirm { display: flex; gap: 14px; }
 .settings .confirm { position: absolute; inset: 0; background: rgba(255,248,234,0.96); border-radius: 28px; align-items: center; justify-content: center; }
 /* start screen */
-.title { position: fixed; inset: 0; z-index: 50; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3vh; background: radial-gradient(circle at 50% 40%, #fff8ea 0%, #f3e3c8 70%, #e9cfa6 100%); touch-action: none; user-select: none; }
+.title { position: fixed; top: 0; bottom: 0; left: -300px; right: -300px; z-index: 50; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3vh; background: radial-gradient(circle at 50% 40%, #fff8ea 0%, #f3e3c8 70%, #e9cfa6 100%); touch-action: none; user-select: none; }
 .title-name { font: 800 min(9vh, 64px)/1.1 "Trebuchet MS", "Segoe UI", sans-serif; color: #6b3f2a; text-shadow: 0 4px 0 #fff, 0 6px 0 rgba(107,63,42,0.25); letter-spacing: 0.02em; text-align: center; }
 .title-friends { display: flex; align-items: flex-end; gap: 2vh; }
 .title-friends .friend { height: min(30vh, 220px); animation: bob 2.4s ease-in-out infinite; pointer-events: none; }
@@ -33,3 +33,7 @@ canvas#game { display: block; position: fixed; left: 0; top: 0; touch-action: no
 .settings .grown-info { max-width: min(80vw, 520px); font: 15px/1.4 "Segoe UI", sans-serif; color: #6b3f2a; text-align: center; }
 .settings .grown-area { flex-direction: column; align-items: center; }
 .settings .grown-area .grown-buttons { display: flex; gap: 14px; }
+
+/* reduce motion (grown-ups setting): no bobbing or pulsing on the start screen and menus */
+body.reduce *, body.reduce *::before, body.reduce *::after { animation: none !important; transition: none !important; }
+.settings button.pic.off svg { opacity: 0.4; }
