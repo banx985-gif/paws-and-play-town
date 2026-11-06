@@ -6,7 +6,7 @@
 //
 // VERSION is stamped automatically by publish.ps1 on every publish. A new
 // version makes the phone install this worker fresh and throw away old copies.
-const VERSION = '20261106-171725';
+const VERSION = '20261106-172210';
 const CACHE = 'paws-play-town-' + VERSION;
 
 // The page itself + the icon/manifest, so the app opens offline straight away.
