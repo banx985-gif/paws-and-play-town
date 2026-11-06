@@ -18,3 +18,18 @@ canvas#game { display: block; position: fixed; left: 0; top: 0; touch-action: no
 .settings .holdring { position: absolute; inset: -6px; border-radius: 50%; border: 8px solid #f2a33a; transform: scale(0); pointer-events: none; box-sizing: border-box; }
 .settings .grown-area, .settings .confirm { display: flex; gap: 14px; }
 .settings .confirm { position: absolute; inset: 0; background: rgba(255,248,234,0.96); border-radius: 28px; align-items: center; justify-content: center; }
+/* start screen */
+.title { position: fixed; inset: 0; z-index: 50; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3vh; background: radial-gradient(circle at 50% 40%, #fff8ea 0%, #f3e3c8 70%, #e9cfa6 100%); touch-action: none; user-select: none; }
+.title-name { font: 800 min(9vh, 64px)/1.1 "Trebuchet MS", "Segoe UI", sans-serif; color: #6b3f2a; text-shadow: 0 4px 0 #fff, 0 6px 0 rgba(107,63,42,0.25); letter-spacing: 0.02em; text-align: center; }
+.title-friends { display: flex; align-items: flex-end; gap: 2vh; }
+.title-friends .friend { height: min(30vh, 220px); animation: bob 2.4s ease-in-out infinite; pointer-events: none; }
+.title-friends .friend.small { height: min(22vh, 160px); animation-delay: -1.2s; }
+.title-play { width: min(24vh, 170px); height: min(24vh, 170px); border-radius: 50%; border: 8px solid #6b3f2a; background: #5ad17b; box-shadow: 0 8px 0 #3a9a55; cursor: pointer; position: relative; animation: pulse 1.6s ease-in-out infinite; touch-action: none; }
+.title-play span { position: absolute; left: 38%; top: 26%; width: 0; height: 0; border-top: min(6vh, 42px) solid transparent; border-bottom: min(6vh, 42px) solid transparent; border-left: min(9vh, 64px) solid #fff; }
+@keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-2vh); } }
+@keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.06); } }
+@media (prefers-reduced-motion: reduce) { .title-friends .friend, .title-play { animation: none; } }
+/* grown-ups information */
+.settings .grown-info { max-width: min(80vw, 520px); font: 15px/1.4 "Segoe UI", sans-serif; color: #6b3f2a; text-align: center; }
+.settings .grown-area { flex-direction: column; align-items: center; }
+.settings .grown-area .grown-buttons { display: flex; gap: 14px; }
